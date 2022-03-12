@@ -1,0 +1,149 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <div class="read">0%</div>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="legitinterestCalculator.css">
+    <title>COMPOUND INTEREST CALCULATOR</title>
+</head>
+<body>
+    <section class="main-content">
+        <div class="container">
+            <nav class="navbar">
+                <div class="head">
+                    <h1>The <em><span>Interest</span></em> Calculator <i class="fa fa-calculator"></i></h1>
+                </div>
+                <div class="nav-links" id="navLinks">
+                    <i class="fa fa-times" onclick="hidemenu()"></i>
+                    <ul>
+                        <li><a href="legitSI.html" >Simple Interest</a> </li> 
+                        <li><a href="legitCI.html" class="active" style="color: #fff;" >Compound Interest</a> </li>
+                        <li><a href="legitMCI.html">Monthly Interest</a> </li> 
+                        <li><a href="legitDCI.html">Daily Interest</a> </li> 
+                        <li><a href="legitABOUT.html">About</a> </li>
+                    </ul>
+                </div>
+                <div class="burger" onclick="showmenu()">
+                    <div class="layer1"></div>
+                    <div class="layer2"></div>
+                    <div class="layer3"></div>
+                </div>
+            </nav>
+            <div class="si-content">
+                <div class="si">
+                    <p>The <em>Compound Interest</em> is the method of calculating the interest amount 
+                        for a particular principal amount of money at some rate of interest.</p>
+                        <p>
+                            Therefore,<em> the Compound interest calculator</em> is a software used in calculating or getting 
+                            the Compound interest of a particular principal amount of money at some rate of interest. 
+                        </p>
+                       <a href="legitinterestCalculator.html" class="btn-3">Back Home</a>
+                </div>
+                <div class="si-calc">
+                    <form action="#" class="calc">
+                        <h2>Compound Interest Calculator</h2>
+                        <label for="principal">Pricipal</label>
+                        <input type="number" id="princ" required>
+               e         <label for="rate">Rate (%)</label>
+                        <input type="number" id="rate" required>
+                        <label for="time">Time</label>
+                        <input type="number" id="time" required>
+                    </form>
+
+                    <button onclick="calculateCI()" id="btn-2">Check Compound Interest</button>
+                    <button onclick="location.reload()" id="btn-2">Reset</button>
+                    <div class="scores">
+                        <p>The principal Is : <span id="output_principal"></span></p>
+                        <p>The compound Interest Is : <span id="output_interest"></span></p>
+                        <p>The Total Is : <span id="output_total"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="footer">
+            <div class="main-footer">
+                <div class="quick-links">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="legitSI.html">Simple Interest</a></li>
+                        <li><a href="legitCI.html" style="text-decoration: underline;">Compound Interest</a></li>
+                        <li><a href="legitMCI.html">Monthly Interest</a></li>
+                        <li><a href="legitDCI.html">Daily Interest</a></li>
+                        <li><a href="legitABOUT.html">About</a></li>
+                    </ul>
+                </div>
+    
+                <div class="dev-contact">
+                    <h2>Developers contact</h2>
+                    <ul>
+                 <li> <a href="#"> <i class="fa-brands fa-facebook"></i></a></li>
+                 <li> <a href="#"> <i class="fa-brands fa-twitter"></i></a></li>
+                 <li><a href="#"> <i class="fa-brands fa-whatsapp"></i></a></li>
+                 <li><a href="#"> <i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#"> <i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+                </div>
+            </div>
+          <p>  Mail Us at jraphael441@gmail.com</p>
+          <hr>
+         <p> copyright &copy 2022</p>
+        </section>
+    </section>
+    <script>
+        function calculateCI(){
+        let principal = parseInt(document.getElementById("princ").value)
+        let rate = parseInt(document.getElementById("rate").value)
+        let time = parseInt( document.getElementById("time").value)
+        let output_principal = document.getElementById("output_principal")
+        let output_interest = document.getElementById("output_interest")
+        let output_total = document.getElementById("output_total")
+        let comp = principal*(1+(rate/100))**time
+        comp = comp.toFixed(3)
+        output_principal.innerText = principal
+        let output = comp-principal
+        output_interest.innerText = output.toFixed(3)  
+        // let output = comp-principal  
+        // output_total.innerText = output.toFixed(2)
+        output_total.innerText = comp
+        }
+    </script>
+    <script>
+        let menu = document.getElementsByClassName(".burger")
+        let navLinks = document.getElementById("navLinks")
+        // navLinks.style.display = "none"; 
+        // menu.onclick = function(){
+        //   navLinks.style.display = "block";
+        // }
+        function showmenu(){
+            navLinks.style.right = "0";
+        }
+        function hidemenu(){
+            navLinks.style.right = "-300px"
+        }
+    
+    </script>
+    <script>
+        const body = document.querySelector("body")
+        const text = document.querySelector(".read")
+
+        let load = 0
+       let int = setInterval(loader,30)
+        body.classList.add("body")
+        function loader(){
+            load++
+
+            if(load > 99){
+                clearInterval(int)
+                text.style.display = "none"
+            }
+            text.innerText = `${load}%`
+            text.classList.add("fadein")
+            
+        }
+    </script>
+</body>
+</html>
