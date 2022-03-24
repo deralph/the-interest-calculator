@@ -110,10 +110,6 @@
     <script>
         let menu = document.getElementsByClassName(".burger")
         let navLinks = document.getElementById("navLinks")
-        // navLinks.style.display = "none"; 
-        // menu.onclick = function(){
-        //   navLinks.style.display = "block";
-        // }
         function showmenu(){
             navLinks.style.right = "0";
         }
@@ -125,7 +121,6 @@
     <script>
         const body = document.querySelector("body")
         const text = document.querySelector(".read")
-        // const main = document.getElementsByTagName("body")
 
         let load = 0
        let int = setInterval(loader,30)
@@ -139,7 +134,6 @@
             }
             text.innerText = `${load}%`
             text.classList.add("fadein")
-            // main.style.overflow = "hidden"
         }
     </script>
 </body>

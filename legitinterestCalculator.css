@@ -73,7 +73,6 @@ body{
 }
 .content-text p{
     font-size: 30px;
-    /* font-family: Arial, Helvetica, sans-serif; */
 }
 .content-text span{
     font-size: 40px;
@@ -159,11 +158,10 @@ color: darkblue;
 }
 
 
-/* simple interest calculator */
+/*  interest calculator */
 
 .active{
     background: darkblue;
-    /* color: #fff; */
 }
 .si{
   flex-basis: 50%;
@@ -313,10 +311,6 @@ input{
         font-size: 40px;
         margin-top: 20px;
     }
-    /* .read{
-        font-size: 120px;
-    } */
-
    .navbar ul li a{
        font-size: 40px;
    }
@@ -363,15 +357,6 @@ input{
    }
 }
 @media (min-height:1000px){
-    /* .content-text p{
-        font-size: 50px;
-    }
-    .calculate{
-        font-size: 600px;
-    }
-    .btn{
-        font-size: 50px;
-    } */
     .container{
         height: 100vh;
     }
@@ -392,7 +377,6 @@ input{
         width: 250px;
         padding: 20px;
         background: darkblue;
-        /* display: none; */
         position: fixed;
         z-index: 10;
         transition: all 0.5s;
@@ -463,9 +447,7 @@ input{
         margin-top: 0;
     }
     .si-calc{
-        /* margin-top: 50px; */
         padding: 10px;
-        /* width: 300px; */
         height: auto;
         margin: 70px auto 0 auto;
     }
@@ -523,14 +505,12 @@ input{
     .content-text p{
         font-size: 24px;
         margin-left: 0;
-        /* flex-basis: 100%; */
     }
     .content-text p em{
         font-size: 27px;
     }
     .calculate{
        font-size: 250px;
-       /* height: 400px; */
         margin: 70px auto;
     }
     .footer{
@@ -549,7 +529,6 @@ input{
 }
 
 
-/* loader */
 .read{
     position: absolute;
     top: 50%;
@@ -577,7 +556,7 @@ input{
 }
 @keyframes blur{
     0%{
-        filter: blur(10px);
+        filter: blur(50px);
     }
     100%{
         filter: none;
@@ -587,6 +566,3 @@ input{
 
 
 
-
- /* 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  */
- /* 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 */
